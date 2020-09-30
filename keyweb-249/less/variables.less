@@ -1,0 +1,69 @@
+@brand-font: 'StoneSerif', sans-serif;
+@brand-font-second: 'Fira Sans', sans-serif;
+@font-family-base: @brand-font;
+@grid-gutter-width: 30px;
+@container-md: 100%;
+@container-tablet: 100%;
+@screen-md: 1025px;
+@screen-lg: (1170px + @grid-gutter-width); // if fullwidth - then 100%
+@container-desktop: (1170px + @grid-gutter-width); // if fullwidth - then auto
+@container-large-desktop: @container-desktop;
+@grid-columns: 12;
+
+@brand-white: rgba(255, 255, 255, 1);
+@brand-red: #000000;
+@brand-violet: ;
+@brand-green: ;
+@brand-gray: rgba(0,0,0,0.5);
+@brand-light-gray: ;
+@brand-blue: #2d5b73;
+@brand-blue-sub: ;
+@brand-dark-blue: ;
+@brand-yellow: ;
+@brand-black: #000000;
+@brand-color: #d00f26;
+
+
+.bg-image(@bg-pos: center center, @bg-rep: no-repeat, @bg-size: cover){
+	background-position: @bg-pos;
+	background-repeat: @bg-rep;
+	-webkit-background-size: @bg-size;
+	background-size: @bg-size;
+
+}
+
+.transition(@prop: all, @dur: 0.3s, @ease: ease) {
+	-webkit-transition: @prop @dur @ease;
+	-moz-transition   : @prop @dur @ease;
+	transition        : @prop @dur @ease;
+}
+
+.bg-image(@bg-pos: center center, @bg-rep: no-repeat, @bg-size: cover) {
+	background-position    : @bg-pos;
+	background-repeat      : @bg-rep;
+	-webkit-background-size: @bg-size;
+	background-size        : @bg-size;
+}
+.centered(){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% -50%);
+}
+
+.placeholder(@rules) {
+
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
+
